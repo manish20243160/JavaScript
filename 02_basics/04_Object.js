@@ -39,3 +39,22 @@ console.log(Object.entries(tinderUser))
 
 console.log(tinderUser.hasOwnProperty('isLoggedIn'))  //check , object has isLoggedIn key?
 
+
+//learing destructuring
+
+const course={
+    coursename: "js in hindi",
+    price: "999",
+    courseInstructor:"Hitesh"
+}
+
+const {courseInstructor: instructor}=course
+console.log(instructor)
+
+// {                                //Jeson
+//     "name": "Manish",
+//      "coursename": "js in hindi",
+//      "price":"free"
+// }
+
+
