@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    content="width=device-width, initial-scale=1.0">
+    <title>Chai aur Code|DOM</title>
+</head>
+<body style="background-color: #212121; color: white;">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+
+<script>
+    function addLanguage(langName){     // we are wrinting a function to add language in the list 
+        const li=document.createElement('li')          //creating li
+        li.innerHTML=`${langName}`                          //giving inner text to li
+        document.querySelector('.language').appendChild(li)     //appending li to ul
+
+    }
+    addLanguage("Python")   //calling function to add language in the list
+
+    //something optimise approach
+    function addOptiLanguage(langName){
+        const li=document.createElement('li')          //creating li
+        li.appendChild(document.createTextNode(langName))  
+        document.querySelector('.language').appendChild(li)     //appending li to ul
+    }
+    addOptiLanguage("Java")   //calling function to add language in the list
+
+
+    //now learning how to edit
+    const secondLang=document.querySelector("li:nth-child(2)")   //editing the first li
+    //secondLang.innerHTML="MOJO"  //it will change the second li to MOJO
+    const newli=document.createElement('li')
+    newli.textContent="Mojo"
+    secondLang.replaceWith(newLi)
+
+    //edit
+    const firstLang=document.querySelector("li:first-child")   //editing the first li
+    firstLang.outerHTML="<li>NodeJS</li>"  //it will change the first li to NodeJS
+
+    //remove
+    const thirdLang=document.querySelector("li:nth-child(3)")   
+    thirdLang.remove()
+</script>
+</html>
