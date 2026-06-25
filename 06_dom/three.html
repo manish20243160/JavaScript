@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+    content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+    const div=document.createElement('div') // create a div -> <div></div>
+    console.log(div)
+    div.className="main"                   //giving class name ti div -> <div class="main"></div>
+    div.id=Math.round(Math.random()*10 + 1)    //giving id to div -> <div class="main" id="7"></div>
+    div.setAttribute("title","generated title")  // giving title to div -> <div class="main" id="7" title="generated title"></div>
+    div.style.backgroundColor="green"            //giving background color to div -> <div class="main" id="7" title="generated title" style="background-color:green;"></div>
+    div.style.padding="12px"                     //giving padding to div -> <div class="main" id="7" title="generated title" style="background-color:green; padding:12px;"></div>
+    div.innerText="Chai aur code"                //giving inner text to div -> <div class="main" id="7" title="generated title" style="background-color:green; padding:12px;">Chai aur code</div>
+    document.body.appendChild(div)               //appending div to body -> <body><div
+    const addText=document.createTextNode("Chai aur Code")   //creating text node -> "Chai aur Code"
+    div.appendChild(addText)            //appending text node to div -> <div class="main" id="7" title="generated title" style="background-color:green; padding:12px;">Chai aur codeChai aur Code</div>
+
+    document,body.appendChild(div)  //appending div to body -> <body><div class="main" id="7" title="generated title" style="background-color:green; padding:12px;">Chai aur codeChai aur Code</div></body>
+</script>
+</html>
